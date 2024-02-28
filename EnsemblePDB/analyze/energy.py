@@ -26,10 +26,10 @@ def get_potential_from_dist(dist, nbins=300, temp=298, save_to=None):
     data['bin min'] = data['bins'].apply(lambda x: float(x.left))
     data['bin max'] = data['bins'].apply(lambda x: float(x.right))
     data['bin mid'] = data['bins'].apply(lambda x: float(x.mid))
+    data = data[['bin min', 'bin max', 'bin mid','f_bin','E']].astype('float').sort_values(by='bin mid').drop_duplicates()
     if save_to:
         data.to_csv(save_to)
-    # return data[['bin min', 'bin max', 'bin mid','f_bin','E']].astype('float')
-    return data[['bin min', 'bin max', 'bin mid','f_bin','E']].astype('float').sort_values(by='bin mid').drop_duplicates()
+    return data
 
 def get_energy_from_stats(potential, measured, default_maximum=True, set_maximum=None):
     '''
