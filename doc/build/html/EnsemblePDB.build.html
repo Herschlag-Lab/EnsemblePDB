@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>EnsemblePDB.build package &mdash; EnsemblePDB 0.1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EnsemblePDB.refine package" href="EnsemblePDB.refine.html" />
+    <link rel="prev" title="EnsemblePDB.analyze package" href="EnsemblePDB.analyze.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="modules.html" class="icon icon-home"> EnsemblePDB
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="EnsemblePDB.html">EnsemblePDB package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="EnsemblePDB.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.analyze.html">EnsemblePDB.analyze package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">EnsemblePDB.build package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.build.alignment">EnsemblePDB.build.alignment module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.build.renumber">EnsemblePDB.build.renumber module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.build">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.refine.html">EnsemblePDB.refine package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.search.html">EnsemblePDB.search package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.utils.html">EnsemblePDB.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.visualize.html">EnsemblePDB.visualize package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EnsemblePDB.html#module-EnsemblePDB">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">EnsemblePDB</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="modules.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="EnsemblePDB.html">EnsemblePDB package</a> &raquo;</li>
+        
+      <li>EnsemblePDB.build package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/EnsemblePDB.build.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ensemblepdb-build-package">
+<h1>EnsemblePDB.build package<a class="headerlink" href="#ensemblepdb-build-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-EnsemblePDB.build.alignment">
+<span id="ensemblepdb-build-alignment-module"></span><h2>EnsemblePDB.build.alignment module<a class="headerlink" href="#module-EnsemblePDB.build.alignment" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.build.alignment</p>
+<p>pymol function</p>
+<dl class="simple">
+<dt>Authors:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.build.alignment.align_all_pymol">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.build.alignment.</span></span><span class="sig-name descname"><span class="pre">align_all_pymol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loaded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_pdb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_pdb_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_skip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'BLOSUM62'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'align'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.build.alignment.align_all_pymol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Aligns all pdb in directory to the reference_pdb using the specifed alignment;
+Saves alignment output file and an rmsd summary file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<em>str</em>) – directory where renamed PDB files are saved</p></li>
+<li><p><strong>reference_pdb</strong> (<em>str</em>) – Entry ID of the reference pdb in the given directory, if not specified, assumes first object in the directory is reference pdb</p></li>
+<li><p><strong>reference_pdb_file</strong> (<em>str</em>) – path to the reference pdb file if desired reference pdb is not in the given directory, will use this only if reference_pdb is not given.</p></li>
+<li><p><strong>alignment</strong> (<em>str</em>) – Pymol selection on which to do final alignment. Use only word selection language (e.g. chain A and name CA), not “/” selection.
+(alignment parameters) <a class="reference external" href="https://pymolwiki.org/index.php/Align">https://pymolwiki.org/index.php/Align</a></p></li>
+<li><p><strong>loaded</strong> (<em>bool</em>) – whether the structures are already loaded in pymol. If not, will load everything in the given directory</p></li>
+<li><p><strong>cutoff</strong> (<em>float</em>) – outlier rejection cutoff in RMS {default: 2.0}</p></li>
+<li><p><strong>cycles</strong> (<em>int</em>) – maximum number of outlier rejection cycles
+{default: 5}</p></li>
+<li><p><strong>gap</strong> (<em>float</em>) – {default: 10.0}</p></li>
+<li><p><strong>max_gap</strong> (<em>int</em>) – {default: 50}</p></li>
+<li><p><strong>extend</strong> (<em>float</em>) – {default: 0.5}</p></li>
+<li><p><strong>max_skip</strong> (<em>int</em>) – {default: 0}</p></li>
+<li><p><strong>matrix</strong> (<em>str</em>) – name of substitution matrix for sequence alignment
+{default: ‘BLOSUM62’}</p></li>
+<li><p><strong>align_methods</strong> (<em>str</em>) – align, cealign or super. Unless low sequence alignment, align
+is reccomended {default: “align”}</p></li>
+<li><p><strong>output_directory</strong> (<em>str</em>) – Path to the folder in which these realigned pdbs and summary report will be saved {default:None}</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>alignment_output and rmsd summary for the specified alignment</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.build.alignment.multiple_alignments">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.build.alignment.</span></span><span class="sig-name descname"><span class="pre">multiple_alignments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alignments</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loaded</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_pdb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">naive</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cutoff</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cycles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_gap</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">50</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extend</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_skip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matrix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'BLOSUM62'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">align_method</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'align'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.build.alignment.multiple_alignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a list of alignments performs all alignments
+output the indiviual alignment summaries and save the aligned pdbs, and then
+output a summary of the comparitive performance of all alignments</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory</strong> (<em>str</em>) – renamed PDB folder</p></li>
+<li><p><strong>output_directory</strong> (<em>str</em>) – folder to save all files to.</p></li>
+<li><p><strong>reference_pdb</strong> (<em>str</em>) – the pdb id of reference, if not given assume it is
+at the top of the objects</p></li>
+<li><p><strong>naive</strong> (<em>bool</em>) – if True do a naive alignment on all atoms {default: False}</p></li>
+<li><p><strong>cutoff</strong> (<em>float</em>) – outlier rejection cutoff in RMS {default: 2.0}</p></li>
+<li><p><strong>cycles</strong> (<em>int</em>) – maximum number of outlier rejection cycles
+{default: 5}</p></li>
+<li><p><strong>gap</strong> (<em>float</em>) – {default: 10.0}</p></li>
+<li><p><strong>max_gap</strong> (<em>int</em>) – {default: 50}</p></li>
+<li><p><strong>extend</strong> (<em>float</em>) – {default: 0.5}</p></li>
+<li><p><strong>max_skip</strong> (<em>int</em>) – {default: 0}</p></li>
+<li><p><strong>matrix</strong> (<em>String</em>) – name of substitution matrix for sequence alignment
+{default: ‘BLOSUM62’}</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>rmsd stats</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Outputs:</dt><dd><p>save the alignment output and all-atom rmsd for all alignments, and
+pdbs for all alignment in labeled folders. Then save a summary statistics comparing
+all alignments.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.build.renumber">
+<span id="ensemblepdb-build-renumber-module"></span><h2>EnsemblePDB.build.renumber module<a class="headerlink" href="#module-EnsemblePDB.build.renumber" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.build.renumber</p>
+<p>Functions to renumber PDBs by reference chains or sequences</p>
+<dl class="simple">
+<dt>Authors:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>)
+Siyuan Du (<a class="reference external" href="mailto:dusiyuan&#37;&#52;&#48;stanford&#46;edu">dusiyuan<span>&#64;</span>stanford<span>&#46;</span>edu</a>)
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.build.renumber.download_and_renumber">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.build.renumber.</span></span><span class="sig-name descname"><span class="pre">download_and_renumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">summary_report_csv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_pdb</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_chains</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sequences</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">downloaded_pdb_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combine_chains_by</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">multimer_save</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.build.renumber.download_and_renumber" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a csv files from a pdb search, a reference pdb, and its reference
+chains, download all unaltered pdbs in one folder and then relabel
+chains and renumber residues of chains aligned to reference chains
+according to reference chains numbering and save renumbering in a new folder.
+:param summary_report_csv: csv file resulting from a pdb search</p>
+<blockquote>
+<div><dl class="simple">
+<dt>should contain the following columns</dt><dd><ul class="simple">
+<li><p>Entry ID: pdb ids</p></li>
+</ul>
+</dd>
+<dt>for each chain in reference_chains</dt><dd><ul class="simple">
+<li><p>Order of chains</p></li>
+<li><p>Chain aligned</p></li>
+</ul>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reference_pdb</strong> (<em>str</em>) – pdb id of the reference structure</p></li>
+<li><p><strong>reference_chains</strong> (<em>list of str</em>) – the reference chains as labeled
+in the unaltered reference pdb, other pdbs will be labeled according to these chains.</p></li>
+<li><p><strong>sequences</strong> (<em>list of str</em>) – reference sequences, if input sequences instead of reference_pdb and reference_chains, residues will be number by positions in these sequences. Do not suggest using because proteins have conventional numbering.</p></li>
+<li><p><strong>downloaded_pdb_folder</strong> (<em>str</em>) – If have already downloaded the raw
+unaltered pdbs, specify the folder in which
+they can be found. Note this folder should not
+include any <a href="#id1"><span class="problematic" id="id2">*</span></a>.pdb files you do not wish to
+include {default: None}</p></li>
+<li><p><strong>chain_only</strong> (<em>bool</em>) – If do not want to renumbering aligned chains but
+only want to rename chains {default: False}</p></li>
+<li><p><strong>combine_chains_by</strong> (<em>str</em>) – Only use when need to combine chains, requires input summary report to contain information from refine.check_chains. options: ‘aligned’ or ‘all’ {default: None}</p></li>
+<li><p><strong>multimer_save</strong> (<em>bool</em>) – If True, will save PDBs that contain multimers multiple times, each time with a different aligned chain named “A”.</p></li>
+<li><p><strong>output_directory</strong> (<em>str</em>) – directory to save PDBs and updated reports to.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe</p>
+</dd>
+</dl>
+<p>Output 2 folders, one with downloaded unaltered pdb, unless directory
+already given, and a new directory with pdbs with renumbered residues
+to match the reference pdb and all chains that do not match a reference
+chain labeled L and above.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.build">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-EnsemblePDB.build" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="EnsemblePDB.refine.html" class="btn btn-neutral float-right" title="EnsemblePDB.refine package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="EnsemblePDB.analyze.html" class="btn btn-neutral float-left" title="EnsemblePDB.analyze package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Herschlag Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+__pycache__
+EnsemblePDB.egg-info/
+build/bdist.linux-x86_64
+build/lib
+dist/
+example_output/
+*.pyc

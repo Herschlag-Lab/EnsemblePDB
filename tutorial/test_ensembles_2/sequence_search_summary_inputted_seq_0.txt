@@ -1,0 +1,14 @@
+    Entry ID  sequence_identity  ...                                subject_aligned_seq subject_beg
+0       1ACB              0.983  ...  CGVPAIQPVLSGLSRIVNGEEAVPGSWPWQVSLQDKTGFHFCGGSL...         1.0
+1       1CGI              0.983  ...  CGVPAIQPVLSGLSRIVNGEEAVPGSWPWQVSLQDKTGFHFCGGSL...         1.0
+2       1CGJ              0.983  ...  CGVPAIQPVLSGLSRIVNGEEAVPGSWPWQVSLQDKTGFHFCGGSL...         1.0
+3       1CHG              0.983  ...  CGVPAIQPVLSGLSRIVNGEEAVPGSWPWQVSLQDKTGFHFCGGSL...         1.0
+4       1EX3              0.983  ...  CGVPAIQPVLSGLSRIVNGEEAVPGSWPWQVSLQDKTGFHFCGGSL...         1.0
+..       ...                ...  ...                                                ...         ...
+139     7QIS              1.000  ...  ANTPDRLQQASLPLLSNTNCKKYWGTKIKDAMICAGASGVSSCMGD...         1.0
+140     7QIT              1.000  ...  ANTPDRLQQASLPLLSNTNCKKYWGTKIKDAMICAGASGVSSCMGD...         1.0
+141     8GCH              1.000  ...  ANTPDRLQQASLPLLSNTNCKKYWGTKIKDAMICAGASGVSSCMGD...         1.0
+142     1AFQ              1.000  ...  NTPDRLQQASLPLLSNTNCKKYWGTKIKDAMICAGASGVSSCMGDS...         1.0
+143     3RU4              1.000  ...  NTPDRLQQASLPLLSNTNCKKYWGTKIKDAMICAGASGVSSCMGDS...         1.0
+
+[144 rows x 16 columns]

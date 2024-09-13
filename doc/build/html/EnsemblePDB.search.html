@@ -1,0 +1,421 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>EnsemblePDB.search package &mdash; EnsemblePDB 0.1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EnsemblePDB.utils package" href="EnsemblePDB.utils.html" />
+    <link rel="prev" title="EnsemblePDB.refine package" href="EnsemblePDB.refine.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="modules.html" class="icon icon-home"> EnsemblePDB
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="EnsemblePDB.html">EnsemblePDB package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="EnsemblePDB.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.analyze.html">EnsemblePDB.analyze package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.build.html">EnsemblePDB.build package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.refine.html">EnsemblePDB.refine package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">EnsemblePDB.search package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.search.get_data">EnsemblePDB.search.get_data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.search.get_structures">EnsemblePDB.search.get_structures module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.search.query_pdb">EnsemblePDB.search.query_pdb module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.search">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.utils.html">EnsemblePDB.utils package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.visualize.html">EnsemblePDB.visualize package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EnsemblePDB.html#module-EnsemblePDB">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">EnsemblePDB</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="modules.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="EnsemblePDB.html">EnsemblePDB package</a> &raquo;</li>
+        
+      <li>EnsemblePDB.search package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/EnsemblePDB.search.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ensemblepdb-search-package">
+<h1>EnsemblePDB.search package<a class="headerlink" href="#ensemblepdb-search-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-EnsemblePDB.search.get_data">
+<span id="ensemblepdb-search-get-data-module"></span><h2>EnsemblePDB.search.get_data module<a class="headerlink" href="#module-EnsemblePDB.search.get_data" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.search.get_data</p>
+<p>TODO</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.search.get_data.get_pdb_data">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.search.get_data.</span></span><span class="sig-name descname"><span class="pre">get_pdb_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensemble_csv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'citation.pdbx_database_id_doi':</span> <span class="pre">'citation:</span> <span class="pre">doi',</span> <span class="pre">'citation.title':</span> <span class="pre">'citation:</span> <span class="pre">title',</span> <span class="pre">'citation.year':</span> <span class="pre">'citation:</span> <span class="pre">year',</span> <span class="pre">'diffrn.ambient_temp':</span> <span class="pre">'expt:</span> <span class="pre">diffrn</span> <span class="pre">temp',</span> <span class="pre">'entity_poly.rcsb_mutation_count':</span> <span class="pre">'entity-polymer:</span> <span class="pre">mutation_count',</span> <span class="pre">'exptl_crystal_grow.method':</span> <span class="pre">'expt:</span> <span class="pre">crystal</span> <span class="pre">grow</span> <span class="pre">method',</span> <span class="pre">'exptl_crystal_grow.ph':</span> <span class="pre">'expt:</span> <span class="pre">crystal</span> <span class="pre">grow</span> <span class="pre">pH',</span> <span class="pre">'pdbx_entity_nonpoly.comp_id':</span> <span class="pre">'pdbx-entity-nonpolymer:</span> <span class="pre">chem</span> <span class="pre">component</span> <span class="pre">id',</span> <span class="pre">'pdbx_entity_nonpoly.entity_id':</span> <span class="pre">'pdbx-entity-nonpolymer:</span> <span class="pre">entity</span> <span class="pre">id',</span> <span class="pre">'pdbx_entity_nonpoly.name':</span> <span class="pre">'pdbx-entity-nonpolymer:</span> <span class="pre">name',</span> <span class="pre">'pdbx_vrpt_summary.clashscore':</span> <span class="pre">'pdbx:</span> <span class="pre">clashscore',</span> <span class="pre">'pdbx_vrpt_summary.pdbr':</span> <span class="pre">'pdbx:</span> <span class="pre">Rfactor',</span> <span class="pre">'pdbx_vrpt_summary.pdbresolution':</span> <span class="pre">'pdbx:</span> <span class="pre">resolution',</span> <span class="pre">'pdbx_vrpt_summary.pdbrfree':</span> <span class="pre">'pdbx:</span> <span class="pre">Rfree',</span> <span class="pre">'rcsb_entity_source_organism.scientific_name':</span> <span class="pre">'pdbx-entity:</span> <span class="pre">organism</span> <span class="pre">scientific</span> <span class="pre">name',</span> <span class="pre">'rcsb_entry_container_identifiers.entity_ids':</span> <span class="pre">'rscb-entry:</span> <span class="pre">entity</span> <span class="pre">ids',</span> <span class="pre">'rcsb_entry_info.molecular_weight':</span> <span class="pre">'rcsb-entry:</span> <span class="pre">molecular</span> <span class="pre">weight',</span> <span class="pre">'rcsb_entry_info.nonpolymer_entity_count':</span> <span class="pre">'rcsb-entry:</span> <span class="pre">nonpolymer</span> <span class="pre">entity</span> <span class="pre">count',</span> <span class="pre">'rcsb_entry_info.polymer_entity_count':</span> <span class="pre">'rcsb-entry:</span> <span class="pre">polymer</span> <span class="pre">entity</span> <span class="pre">count',</span> <span class="pre">'rcsb_entry_info.polymer_entity_count_protein':</span> <span class="pre">'rcsb-entry:</span> <span class="pre">polymer</span> <span class="pre">entity</span> <span class="pre">protein</span> <span class="pre">count',</span> <span class="pre">'rcsb_entry_info.polymer_molecular_weight_maximum':</span> <span class="pre">'rcsb-entry:</span> <span class="pre">polymer</span> <span class="pre">molecular</span> <span class="pre">weight</span> <span class="pre">max',</span> <span class="pre">'rcsb_entry_info.polymer_molecular_weight_minimum':</span> <span class="pre">'rcsb-entry:</span> <span class="pre">polymer</span> <span class="pre">molecular</span> <span class="pre">weight</span> <span class="pre">min',</span> <span class="pre">'rcsb_nonpolymer_entity.formula_weight':</span> <span class="pre">'rcsb-nonpolymer-entity:</span> <span class="pre">formula</span> <span class="pre">weight',</span> <span class="pre">'rcsb_polymer_entity.pdbx_description':</span> <span class="pre">'rscb-polymer-entity:</span> <span class="pre">description',</span> <span class="pre">'rcsb_polymer_entity.pdbx_ec':</span> <span class="pre">'rscb-polymer-entity:</span> <span class="pre">EC</span> <span class="pre">number',</span> <span class="pre">'rcsb_polymer_entity.pdbx_mutation':</span> <span class="pre">'rscb-polymer-entity:</span> <span class="pre">mutation',</span> <span class="pre">'refine.biso_mean':</span> <span class="pre">'refine_bfactor_mean'}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MyProtein'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">info_list</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['entry',</span> <span class="pre">'entity',</span> <span class="pre">'chem']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols_to_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.search.get_data.get_pdb_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a csv with PDB IDs in the ‘Entry ID’ column, downloads
+and merges summary reports for those PDB ids from the PDB.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ensemble_csv</strong> (<em>str</em>) – location of csv file with the PDB IDs</p></li>
+<li><p><strong>desired_cols</strong> (<em>dict</em>) – keys are the name of the PDB information, values are
+what you would like this column to be names</p></li>
+<li><p><strong>label</strong> (<em>str</em>) – Label to add to output file name</p></li>
+<li><p><strong>info_list</strong> (<em>list of str</em>) – list of what type of attributes you want
+note “entry” must be one of them</p></li>
+<li><p><strong>cols_to_group</strong> (<em>list of lists</em>) – Used if there are columns expected to have more than one entry, such as sequence annotations, where each
+site is expected to have a set of data: “type”, “description,” etc. These data will need to be paired per site, potentially
+inserting “None” (str) if no data is available for a site to keep everything aligned. Each list contains strings of the column
+names that will be included in that group.
+Example: cols_to_group = [[‘rcsb_uniprot_feature.type’,’rcsb_uniprot_feature.description’], …]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe of the summary_report
+the saved dataframe (summary_report*.csv)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.search.get_structures">
+<span id="ensemblepdb-search-get-structures-module"></span><h2>EnsemblePDB.search.get_structures module<a class="headerlink" href="#module-EnsemblePDB.search.get_structures" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.search.get_structure</p>
+<p>TODO</p>
+<dl class="simple">
+<dt>Authors:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.search.get_structures.download_pdbs">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.search.get_structures.</span></span><span class="sig-name descname"><span class="pre">download_pdbs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ensemble_csv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_folder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.search.get_structures.download_pdbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a csv files from a pdb search, downlaod all pdbs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ensemble_csv</strong> (<em>str</em>) – <p>csv file resulting from a pdb search should
+contain the following columns</p>
+<blockquote>
+<div><ul>
+<li><p>Entry ID: pdb ids</p></li>
+</ul>
+</div></blockquote>
+</p></li>
+<li><p><strong>output_folder</strong> (<em>str</em>) – if specified will save pdbs in that folder,
+otherwise will save in unaltered_pdbs in current folder {default: None},
+note will overwrite everything in the folder specified if it exists</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Path, location of the downloaded pdbs</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Output:</dt><dd><p>Folder with downloaded, unaltered, pdbs</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.search.query_pdb">
+<span id="ensemblepdb-search-query-pdb-module"></span><h2>EnsemblePDB.search.query_pdb module<a class="headerlink" href="#module-EnsemblePDB.search.query_pdb" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.search.query_pdb</p>
+<p>TODO DESCRIPTION</p>
+<dl class="simple">
+<dt>Authors:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.search.query_pdb.query_by_ref_pdb">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.search.query_pdb.</span></span><span class="sig-name descname"><span class="pre">query_by_ref_pdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference_pdb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_chains</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MyProtein'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">macromolecule_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xray_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairwise_align_options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'alignment_type':</span> <span class="pre">'local',</span> <span class="pre">'gap_extend_score':</span> <span class="pre">-</span> <span class="pre">0.1,</span> <span class="pre">'gap_open_score':</span> <span class="pre">-</span> <span class="pre">0.5}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.search.query_pdb.query_by_ref_pdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will take sequence(s) or reference pdb chain(s) and will search
+the PDB for structures of similar sequences.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>reference_pdb</strong> (<em>str</em>) – pdb id (‘XXXX’) to be the reference.</p></li>
+<li><p><strong>reference_chains</strong> (<em>list of str</em>) – list of the chains of the reference
+structure to use to seqeunce search.</p></li>
+<li><p><strong>label</strong> – Label to add to end of file names</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>summary output of the similar pdb found,</dt><dd><p>including the chains that aligned with to
+reference and additionally alignment to
+reference for all chains.</p>
+</dd>
+</dl>
+<p>saves the returned data frame to seq_search_output*.csv
+saves the raw output from PDB sequence search to
+sequence_search_summary*.txt and sequence_search_summary*.fasta</p>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>Pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.search.query_pdb.query_by_sequence">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.search.query_pdb.</span></span><span class="sig-name descname"><span class="pre">query_by_sequence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequences</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">macromolecule_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'MyProtein'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.95</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xray_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairwise_align_options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'alignment_type':</span> <span class="pre">'local',</span> <span class="pre">'gap_extend_score':</span> <span class="pre">-</span> <span class="pre">0.1,</span> <span class="pre">'gap_open_score':</span> <span class="pre">-</span> <span class="pre">0.5}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'.'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.search.query_pdb.query_by_sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will take sequence(s) or reference pdb chain(s) and will search
+the PDB for structures of similar sequences.
+:param sequences: list of sequence(s) to search on.
+:type sequences: list of str</p>
+<blockquote>
+<div><dl>
+<dt>(optional)</dt><dd><dl class="simple">
+<dt>macromolecule_name (str): name to search pdb by. May add structures to list</dt><dd><p>not found by sequence search, or identify pdb not
+labeled with the desired name.
+Reported in column: “From macromolecular search”</p>
+</dd>
+<dt>seq_id (float): if specified uses this number as the minimum percent identity</dt><dd><p>of sequences to be added instead of calculating from max_mut</p>
+</dd>
+<dt>xray_only (bool): only return x-ray crystallographic structures</dt><dd><p>{default: True}</p>
+</dd>
+</dl>
+<p>evalue (float):
+pairwise_align_options, {default: {‘alignment_type’:”local”,’gap_open_score’:-0.5, ‘gap_extend_score’:-0.1}}</p>
+<blockquote>
+<div><p>Options for paiwise sequence alignment scoring.
+Can score alignment anyway with pairwise2:
+<a class="reference external" href="https://biopython.org/docs/1.75/api/Bio.pairwise2.html">https://biopython.org/docs/1.75/api/Bio.pairwise2.html</a>
+Dictionary keys can be:</p>
+<blockquote>
+<div><p>alignment_type=”local”, match_score, mismatch_score, score_match_dict,
+score_match_func_ref, score_match_func_seq,
+gap_open_score, gap_extend_score,
+gap_open_score_ref, gap_extend_score_ref, gap_open_score_seq, gap_extend_score_seq,
+score_gap_func_ref, score_gap_func_seq,</p>
+</div></blockquote>
+</div></blockquote>
+<dl class="simple">
+<dt>output_dir, if not working in data directory you can specify where</dt><dd><p>to save output {default: “.”}</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>summary output of the similar pdb found,</dt><dd><p>including the chains that aligned with to
+reference and additionally alignment to
+reference for all chains.</p>
+</dd>
+</dl>
+<p>saves the returned data frame to seq_search_output*.csv
+saves the raw output from PDB sequence search to
+sequence_search_summary*.txt and sequence_search_summary*.fasta</p>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Pandas dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.search">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-EnsemblePDB.search" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="EnsemblePDB.utils.html" class="btn btn-neutral float-right" title="EnsemblePDB.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="EnsemblePDB.refine.html" class="btn btn-neutral float-left" title="EnsemblePDB.refine package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Herschlag Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

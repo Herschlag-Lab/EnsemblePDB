@@ -1,0 +1,872 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>EnsemblePDB.utils package &mdash; EnsemblePDB 0.1.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EnsemblePDB.visualize package" href="EnsemblePDB.visualize.html" />
+    <link rel="prev" title="EnsemblePDB.search package" href="EnsemblePDB.search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="modules.html" class="icon icon-home"> EnsemblePDB
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="EnsemblePDB.html">EnsemblePDB package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="EnsemblePDB.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.analyze.html">EnsemblePDB.analyze package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.build.html">EnsemblePDB.build package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.refine.html">EnsemblePDB.refine package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.search.html">EnsemblePDB.search package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">EnsemblePDB.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.utils.analysis_utils">EnsemblePDB.utils.analysis_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.utils.biopandas_utils">EnsemblePDB.utils.biopandas_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.utils.file_management">EnsemblePDB.utils.file_management module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.utils.search_utils">EnsemblePDB.utils.search_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.utils.sequence_alignment">EnsemblePDB.utils.sequence_alignment module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.utils.table_utils">EnsemblePDB.utils.table_utils module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-EnsemblePDB.utils">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="EnsemblePDB.visualize.html">EnsemblePDB.visualize package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="EnsemblePDB.html#module-EnsemblePDB">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="modules.html">EnsemblePDB</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="modules.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="EnsemblePDB.html">EnsemblePDB package</a> &raquo;</li>
+        
+      <li>EnsemblePDB.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/EnsemblePDB.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ensemblepdb-utils-package">
+<h1>EnsemblePDB.utils package<a class="headerlink" href="#ensemblepdb-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-EnsemblePDB.utils.analysis_utils">
+<span id="ensemblepdb-utils-analysis-utils-module"></span><h2>EnsemblePDB.utils.analysis_utils module<a class="headerlink" href="#module-EnsemblePDB.utils.analysis_utils" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.utils.anlysis_utils</p>
+<p>Basic functions in analysis atomic positions.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.analysis_utils.bootstrap_analysis">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">bootstrap_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.analysis_utils.bootstrap_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply on a group object (one atom) to perform bootstrap analysis on MDev
+and returns a standard deviation from the bootstrap distribution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object</strong> (<em>group</em><em>, </em><em>a group in pandas groupby</em>) – </p></li>
+<li><p><strong>bootstrapping</strong> (<em>iter</em><em>, </em><em>number of iterations to perform</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>standard deviation of the bootstrap distribution</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.analysis_utils.calculate_MDev">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">calculate_MDev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bootstrap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.analysis_utils.calculate_MDev" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coordinates</strong> (<em>df</em><em>, </em><em>dataframe of atom</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>MDevs, dataframe with MDev and count</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.analysis_utils.calculate_msd">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">calculate_msd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">list_of_coords</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.analysis_utils.calculate_msd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>atom</strong> (<em>list/array-like object with x</em><em>,</em><em>y</em><em> or </em><em>z coordinates of one</em>) – </p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Out:</dt><dd><p>array of mean square displacement calculated using each point
+as reference(center)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.analysis_utils.calculate_rmsd">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">calculate_rmsd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.analysis_utils.calculate_rmsd" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>coordinates</strong> (<em>grouped atoms</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dataframe of RMSD for each group</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.analysis_utils.combine_save_MDev">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">combine_save_MDev</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chains</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_PDB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bootstrap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iter</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.analysis_utils.combine_save_MDev" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coords</strong> (<em>df</em><em>, </em><em>dataframe of atom</em>) – </p></li>
+<li><p><strong>strings</strong> (<em>chains</em><em>, </em><em>list of</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>key = chain ID, value = dataframe of MDev of each atom
+saves a csv if save_to is not None</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dictionary</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.analysis_utils.get_distance">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">get_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">z0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.analysis_utils.get_distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.analysis_utils.get_outliers_report">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.analysis_utils.</span></span><span class="sig-name descname"><span class="pre">get_outliers_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.analysis_utils.get_outliers_report" title="Permalink to this definition">¶</a></dt>
+<dd><p>Counts number of outliers in each structure.
+:param atoms: output of get_distances_distributions
+:type atoms: dictionary
+:param output_directory: directory to save output to.
+:type output_directory: str</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.utils.biopandas_utils">
+<span id="ensemblepdb-utils-biopandas-utils-module"></span><h2>EnsemblePDB.utils.biopandas_utils module<a class="headerlink" href="#module-EnsemblePDB.utils.biopandas_utils" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.utils.biopandas_utils</p>
+<p>Basic functions in manipulating pdb in biopandas format.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.clean_multiconformers">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">clean_multiconformers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">atoms</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.clean_multiconformers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes entries  with multi-conformations.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.fetch_and_save_pdb">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">fetch_and_save_pdb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pdbid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.fetch_and_save_pdb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download the given pdb into directory,
+if already there do not over-write.
+:param pdbid: 4 character pdbid “XXXX”
+:type pdbid: str
+:param directory: directory to save pdbid to
+:type directory: str</p>
+<dl class="simple">
+<dt>Output:</dt><dd><p>Saves pdb of the pdbid to the directory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.get_PandasPDB">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">get_PandasPDB</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.get_PandasPDB" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.get_PandasPDBs">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">get_PandasPDBs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.get_PandasPDBs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Pandas PDB object for a set of PDB structures (with aligned coordinates).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>files</strong> (<em>path</em><em>, </em><em>a directory with aligned PDB</em>) – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a pandas dataframe with ‘Entry ID’ and ‘PandasPDB’</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.get_chain_seq">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">get_chain_seq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">struct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_his_tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.get_chain_seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets the sequence of a chain in a structure
+:param struct:
+:type struct: Biopandas.pdb
+:param chain: identity of the chain of interest
+:type chain: str
+:param remove_his_tag: remove the 6x his tage if present {default: False}
+:type remove_his_tag: bool</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>sequence of the chain with 1-letter AA code from struct</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.get_pdb_struct">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">get_pdb_struct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference_pdb</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.get_pdb_struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a 4-character pdb id fetches the Biopandas.pdb
+:param reference_pdb: pdb id “XXXX”
+:type reference_pdb: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Biopandas.pdb object</p>
+</dd>
+</dl>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Returns none if pdb id does not exist, pdb id exists but strcuture has
+not been published, or if connection is poor and it times out. If you
+know structure exists try again or at worst download pdb yourself!</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.get_xyz">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">get_xyz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PDB_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.get_xyz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets xyz coordinates for each atom in a set of PDB structures
+Assumes numberings are consistent.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.biopandas_utils.retrieve_pdbs">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.biopandas_utils.</span></span><span class="sig-name descname"><span class="pre">retrieve_pdbs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PDB_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">directory</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.biopandas_utils.retrieve_pdbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a table with pdb ids in ‘Entry ID’, download
+all the pdb to the directory</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.utils.file_management">
+<span id="ensemblepdb-utils-file-management-module"></span><h2>EnsemblePDB.utils.file_management module<a class="headerlink" href="#module-EnsemblePDB.utils.file_management" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.utils.file_management</p>
+<p>Help finding were to save output files and prevent overwriting files.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.file_management.get_dir">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.file_management.</span></span><span class="sig-name descname"><span class="pre">get_dir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">overwrite</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_existing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.file_management.get_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a base finds a directory name that does not exist and make it.
+Can also choose to overwrite it
+:param base: the base of folder, may add indices to find non-existant
+:type base: str
+:param overwrite: if directory exists just overwrite it
+:type overwrite: bool
+:param use_existing: if directory exists don’t overwrite</p>
+<blockquote>
+<div><p>or make a new one, just use existing</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a directory starting with makes, the directory is already made</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.file_management.get_nonexistant_file">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.file_management.</span></span><span class="sig-name descname"><span class="pre">get_nonexistant_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.file_management.get_nonexistant_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a base finds a file or directory name that does not exist.
+:param base: the base to add indexes to, to ensure nonexistance
+:type base: str
+:param suffix: a suffixes to the base+index to ensure nonexistance
+:type suffix: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>a file starting with base, ending with the suffix that</dt><dd><p>does not exist.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Path</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.utils.search_utils">
+<span id="ensemblepdb-utils-search-utils-module"></span><h2>EnsemblePDB.utils.search_utils module<a class="headerlink" href="#module-EnsemblePDB.utils.search_utils" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.utils.search_utils</p>
+<p>TODO DESCRIPTION</p>
+<dl class="simple">
+<dt>Authors:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.search_utils.combine_dict_info">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.search_utils.</span></span><span class="sig-name descname"><span class="pre">combine_dict_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_collapsed_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">temp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">old_info</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.search_utils.combine_dict_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given 2 dictionaries and a list of keys not to change
+creates a new dictionary with combined values</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_collapsed_dict</strong> (<em>dict</em>) – dictionary to add to</p></li>
+<li><p><strong>temp</strong> (<em>dict</em>) – dictionary to add from</p></li>
+<li><p><strong>old_info</strong> (<em>list of str</em>) – list of keys not to change</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>new_collapsed_dict with the information from temp added</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.search_utils.fetch_data_from_url">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.search_utils.</span></span><span class="sig-name descname"><span class="pre">fetch_data_from_url</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alt_url</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.search_utils.fetch_data_from_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>fetch data from a url</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>url</strong> (<em>str</em>) – base url to fetch from</p></li>
+<li><p><strong>pdb</strong> (<em>str</em>) – the extension to url to fetch from</p></li>
+<li><p><strong>alt_url</strong> (<em>list str</em>) – if fail to fetch from original url try to alt urls</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the json information formatted as a dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.search_utils.fetch_pdb_data">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.search_utils.</span></span><span class="sig-name descname"><span class="pre">fetch_pdb_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols_to_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.search_utils.fetch_pdb_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>fetch PDB data regarding the pdb entry</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pdb</strong> (<em>str</em>) – pbd id “XXXX”</p></li>
+<li><p><strong>desired_cols</strong> (<em>dict</em>) – columns desired as keys</p></li>
+<li><p><strong>cols_to_group</strong> (<em>list of lists</em>) – Used if there are columns expected to have more than one entry, such as sequence annotations, where each
+site is expected to have a set of data: “type”, “description,” etc. These data will need to be paired per site, potentially
+inserting “None” (str) if no data is available for a site to keep everything aligned. Each list contains strings of the column
+names that will be included in that group.
+Example: cols_to_group = [[‘rcsb_uniprot_feature.type’,’rcsb_uniprot_feature.description’], …]</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict flatten with only information in desired_cols</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.search_utils.parse_dict_info">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.search_utils.</span></span><span class="sig-name descname"><span class="pre">parse_dict_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">info</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">desired_cols</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cols_to_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">collapsed_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_group</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.search_utils.parse_dict_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given the raw output of a fetch from pdb recurssively flattens the
+the dictionary and making any multiple instances into a list string sep: (” ~ “)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>info</strong> (<em>dict</em>) – raw output of pypdb.get_info</p></li>
+<li><p><strong>desired_cols</strong> (<em>dict</em>) – columns desired as keys</p></li>
+<li><p><strong>prefic</strong> (<em>str</em>) – only used recursively inside function</p></li>
+<li><p><strong>collapsed_dict</strong> (<em>dict</em>) – only used recursively inside function</p></li>
+<li><p><strong>cols_to_group</strong> (<em>list of lists</em>) – Used if there are columns expected to have more than one entry, such as sequence annotations, where each
+site is expected to have a set of data: “type”, “description,” etc. These data will need to be paired per site, potentially
+inserting “None” (str) if no data is available for a site to keep everything aligned. Each list contains strings of the column
+names that will be included in that group.
+Example: cols_to_group = [[‘rcsb_uniprot_feature.type’,’rcsb_uniprot_feature.description’], …]</p></li>
+<li><p><strong>check_group</strong> (<em>None</em><em> or </em><em>list of bool</em>) – Variable used recursively inside function</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>collapsed dictionary with all same information</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.search_utils.search_seq">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.search_utils.</span></span><span class="sig-name descname"><span class="pre">search_seq</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">search_output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evalue</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.search_utils.search_seq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Takes in a sequence and a threshold for sequence identity and return a
+table with sequences that reach the threshold with their pdb_id, chaiin
+that matches, and alignment information.
+:param sequence: the sequence to search for
+:type sequence: str
+:param seq_id_min: the threshold sequence idenity to include
+:type seq_id_min: float
+:param chain_name: name of reference chain, used only for labeling
+:type chain_name: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><dl class="simple">
+<dt>with the pdb id, alignment information including</dt><dd><p>sequence and the chain(s) that matches</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>Pandas Dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.utils.sequence_alignment">
+<span id="ensemblepdb-utils-sequence-alignment-module"></span><h2>EnsemblePDB.utils.sequence_alignment module<a class="headerlink" href="#module-EnsemblePDB.utils.sequence_alignment" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.utils.sequence_alignment</p>
+<p>Generalized way to easily call pairwise2 with any options desired.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.sequence_alignment.get_all_chain_alignments">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.sequence_alignment.</span></span><span class="sig-name descname"><span class="pre">get_all_chain_alignments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_output_fasta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pdbid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairwise_align_options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.sequence_alignment.get_all_chain_alignments" title="Permalink to this definition">¶</a></dt>
+<dd><p>given a pdb id and a reference sequence, returns the alignment
+of every chain of that pdb with the reference sequence
+- chain names
+- formatted alignments output
+- alignments of the reference sequence
+- alignments of the sequences
+- number of AA matches to the refrence chain</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.sequence_alignment.get_all_chain_alignments_for_table">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.sequence_alignment.</span></span><span class="sig-name descname"><span class="pre">get_all_chain_alignments_for_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">search_output_fasta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seq_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_seq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairwise_align_options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.sequence_alignment.get_all_chain_alignments_for_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a table with pdbs, adds columns indicating how each chain of each
+pdb aligns to the given reference sequence.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.sequence_alignment.get_all_chain_alignments_for_table_multi">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.sequence_alignment.</span></span><span class="sig-name descname"><span class="pre">get_all_chain_alignments_for_table_multi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seq_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_table</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_seqs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chain_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pairwise_align_options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_length</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.sequence_alignment.get_all_chain_alignments_for_table_multi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets alignments for all matching chains of all pdbs in table, given a list
+of reference_seqs and their corresponding reference chains.
+Chains that do not align to any chain listed in Non_aligned_chains</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.sequence_alignment.specific_pairwise2_align">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.sequence_alignment.</span></span><span class="sig-name descname"><span class="pre">specific_pairwise2_align</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">seqA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">seqB</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pw_align_opts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.sequence_alignment.specific_pairwise2_align" title="Permalink to this definition">¶</a></dt>
+<dd><p>use pairwise2 with any options
+For information on pairwise2 please see <a class="reference external" href="https://biopython.org/docs/1.75/api/Bio.pairwise2.html">https://biopython.org/docs/1.75/api/Bio.pairwise2.html</a>.
+:param seqA: first sequence to align (ref)
+:type seqA: str
+:param seqB: second sequence to align (seq)
+:type seqB: str
+:param pw_align_opts: dictionary of alignment options. Keys are:</p>
+<blockquote>
+<div><p>“alignment_type”: “local” or “global”. First, you can give a score for a
+a match and mismatch (“match_score” and “mismatch_score”) or
+specify a dictionary that has scores for every possible pair
+(“score_match_dict”). Or you can specify a function for
+how to score pairing on ref and seq (“score_match_func_ref”
+and “score_match_func_seq”). Second, you can decide how
+gaps are scored. Either a set open and extend score (
+“gap_open_score” and “gap_extend_score”) or you can vary
+how gaps are scored on the reference sequence and input sequence
+(“gap_open_score_ref”,”gap_extend_score_ref”,”gap_open_score_seq”,
+“gap_extend_score_seq”). Finally you can define your own
+arbitary functions (“score_gap_func_ref”,”score_gap_func_seq”)</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Alignment objects???</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.utils.table_utils">
+<span id="ensemblepdb-utils-table-utils-module"></span><h2>EnsemblePDB.utils.table_utils module<a class="headerlink" href="#module-EnsemblePDB.utils.table_utils" title="Permalink to this headline">¶</a></h2>
+<p>EnsemblePDB.utils.table_utils</p>
+<p>Help interpretting the csv output format, specifically with how lists
+of values are represented in the table.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Rachael Kretsch (<a class="reference external" href="mailto:rkretsch&#37;&#52;&#48;stanford&#46;edu">rkretsch<span>&#64;</span>stanford<span>&#46;</span>edu</a>),
+Siyuan Du,
+Jacob Parres-Gold</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.check_mutations">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">check_mutations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_muts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.check_mutations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply on rows of dataframes to check whether the protein has mutation exceeding (&gt;=) max mutation limit
+:param x:
+:type x: row of dataframe
+:param name: protein name.
+:type name: str
+:param max_muts: maximum mutation number</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.contains_keyword">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">contains_keyword</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'rscb-polymer-entity:</span> <span class="pre">description'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.contains_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply on rows of dataframes, filter any entry (row) where description of chain does not contain the input content.
+Assumes the first polymer entity is always the major protein (not ligand).
+Case insentitive.
+:param x:
+:type x: row of dataframe
+:param name: the keyword to filter with.
+:type name: str
+:param col: column to filter the keyword on
+:type col: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.delete_all_one_value">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">delete_all_one_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.delete_all_one_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given table entry, return  one value if all values
+are identical, otherwise orginal entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>s</strong> (<em>str</em>) – a table entry</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>either the original string or reduced to the one repeated value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.get_list_from_table_entry">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">get_list_from_table_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.get_list_from_table_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>get a tbale entry is list form
+:param s: the table entry you want the list of
+:type s: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the list representation of s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.get_nested_lists">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">get_nested_lists</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_entry</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.get_nested_lists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply on table entry with + and ~ to get original nested list.</p>
+<dl class="simple">
+<dt>Argument:</dt><dd><p>table_entry (str): a string with groups separated by + and ~</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>nested list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.get_overlap">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">get_overlap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.get_overlap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given 2 table entries find their intersection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1</strong> (<em>str</em>) – the first table entry</p></li>
+<li><p><strong>x2</strong> (<em>str</em>) – the second table entry</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The element that are both in x1 and x2 in their table entry representation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.get_reference_chains">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">get_reference_chains</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.get_reference_chains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given a ensemble dataframe return which are reference chains</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>Pandas DataFrame</em>) – pandas dataframe that has columns “Align ref <a href="#id1"><span class="problematic" id="id2">*</span></a>: order of chains”
+where * are the reference chains</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of reference chains in df</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.get_table_entry_from_list">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">get_table_entry_from_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.get_table_entry_from_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>from a list get the string to represent it in a table
+:param l: the list you want to put into table
+:type l: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the string representation of l</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.get_union">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">get_union</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.get_union" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given 2 table entries find their union</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1</strong> (<em>str</em>) – the first table entry</p></li>
+<li><p><strong>x2</strong> (<em>str</em>) – the second table entry</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The union without repeating their interection in table entry representation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.reformat_dict">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">reformat_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.reformat_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create csv friendly entries of dictionaries</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="EnsemblePDB.utils.table_utils.wrong_organism">
+<span class="sig-prename descclassname"><span class="pre">EnsemblePDB.utils.table_utils.</span></span><span class="sig-name descname"><span class="pre">wrong_organism</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">orgs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#EnsemblePDB.utils.table_utils.wrong_organism" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply on rows of dataframes to check whether the protein is from a given organism
+:param x:
+:type x: row of dataframe
+:param name: protein name.
+:type name: str
+:param org: organism scientific names
+:type org: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-EnsemblePDB.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-EnsemblePDB.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="EnsemblePDB.visualize.html" class="btn btn-neutral float-right" title="EnsemblePDB.visualize package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="EnsemblePDB.search.html" class="btn btn-neutral float-left" title="EnsemblePDB.search package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Herschlag Lab.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
