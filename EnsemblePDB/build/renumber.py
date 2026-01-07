@@ -84,7 +84,8 @@ def download_and_renumber(summary_report_csv, reference_pdb=None,
            ), "Summary csv does not contain column: Align ref *: pairwise align score"
 
     # save data to
-    output_directory = str(Path(summary_report_csv).parents[0])
+    if not output_directory:
+        output_directory = str(Path(summary_report_csv).parents[0])
     fstem = str(Path(summary_report_csv).stem)
 
     # Get references listed in summary report. Note that this may be different from input reference_chains. E.g. If used query_by_sequence before, but now want to use a reference PDB and chain to renumber.
@@ -327,7 +328,7 @@ def _get_new_aligned_chains(data, reference_pdb, new_ref_chains, table_reference
                     pdb_struct, chain=chain, remove_his_tag=False)
                 alignment = specific_pairwise2_align(ref_seq, seq,
                                                      {'alignment_type': "global", 'gap_open_score': -0.5, 'gap_extend_score': -0.1})
-                if len(alignment) > 1:
+                if len(alignment) >= 1:
                     alignment = alignment[0]
                 else:
                     continue
