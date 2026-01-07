@@ -53,6 +53,7 @@ def align_all_pymol(directory, alignment, loaded=False, reference_pdb=None,
     Returns: 
         alignment_output and rmsd summary for the specified alignment
     '''
+    cmd.reinitialize()
     assert(align_method in ["align", "cealign", "super"]
            ), "align_method must be align, cealign, or super"
 
