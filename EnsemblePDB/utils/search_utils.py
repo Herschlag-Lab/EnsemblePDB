@@ -8,7 +8,7 @@ Authors:
     Jacob Parres-Gold
 """
 
-from rcsbsearchapi.search import SequenceQuery
+from rcsbapi.search import SeqSimilarityQuery
 import requests
 import json
 import pandas as pd
@@ -31,7 +31,12 @@ def search_seq(sequence, seq_id, search_output_file, chain_name, evalue=0.1):
     # search_operator = pypdb.clients.search.operators.sequence_operators.SequenceOperator(sequence=sequence, evalue_cutoff=evalue, identity_cutoff=seq_id)
     # results = pypdb.search_client.perform_search_with_graph(
     #     query_object=search_operator, return_type=pypdb.search_client.ReturnType.POLYMER_ENTITY, return_raw_json_dict=True)
-    results = SequenceQuery(sequence, evalue_cutoff=evalue, identity_cutoff=seq_id, sequence_type='protein')
+    results = SeqSimilarityQuery(
+        value=sequence,
+        evalue_cutoff=evalue,
+        identity_cutoff=seq_id,
+        sequence_type='protein'
+    )
     cols = ['Entry ID', 'sequence_identity', 'evalue', 'bitscore', 'alignment_length', 'mismatches', 'gaps_opened',
             'query_beg', 'query_end', 'subjnect_beg', 'subject_end', 'query_length', 'subject_length', 'query_aligned_seq', 'subject_aligned_seq']
     data = pd.DataFrame(columns=cols)

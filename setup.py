@@ -12,5 +12,5 @@ setup(name='EnsemblePDB',
       author_email='rkretsch@stanford.edu',
       url='http://www.herschlaglab.sqaurespace.com',
       packages=find_packages(),
-      install_requires=[]
+      install_requires=['rcsb-api']
       )

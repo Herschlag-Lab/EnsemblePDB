@@ -12,8 +12,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from rcsbsearchapi.search import AttributeQuery, SequenceQuery
-from rcsbsearchapi.const import STRUCTURE_ATTRIBUTE_SEARCH_SERVICE
+from rcsbapi.search import AttributeQuery, SeqSimilarityQuery
 
 from EnsemblePDB.utils.table_utils import delete_all_one_value
 from EnsemblePDB.utils.sequence_alignment import get_all_chain_alignments_for_table_multi
@@ -102,9 +101,11 @@ def query_by_ref_pdb(reference_pdb, reference_chains, label='MyProtein',
         xray_pdbs = []
     else:
         print("Looking for X-ray crystallographic structures.")
-        query = AttributeQuery("exptl.method", "exact_match", "X-RAY DIFFRACTION",
-                    STRUCTURE_ATTRIBUTE_SEARCH_SERVICE # this constant specifies "text" service
-                    )
+        query = AttributeQuery(
+            attribute="exptl.method",
+            operator="exact_match",
+            value="X-RAY DIFFRACTION"
+        )
         xray_pdbs = list(query())
         if not xray_pdbs:
             print("No PDB structures found.")
@@ -114,8 +115,11 @@ def query_by_ref_pdb(reference_pdb, reference_chains, label='MyProtein',
     # if macrmolecule_name specified get list of pdbs with macromolecular name
     if macromolecule_name is not None:
         print(f"Looking for structures with name {macromolecule_name}")
-        search_operator = AttributeQuery(value=macromolecule_name, operator='contains_phrase',
-            attribute="rcsb_polymer_entity.rcsb_macromolecular_names_combined.name")
+        search_operator = AttributeQuery(
+            attribute="rcsb_polymer_entity.rcsb_macromolecular_names_combined.name",
+            operator='contains_phrase',
+            value=macromolecule_name
+        )
         name_pdbs = list(search_operator('polymer_entity'))
         if not name_pdbs:
             print("No PDB structures found.")
@@ -262,17 +266,22 @@ def query_by_sequence(sequences,
         xray_pdbs = []
     else:
         # print("Looking for X-ray crystallographic structures.")
-        query = AttributeQuery("exptl.method", "exact_match", "X-RAY DIFFRACTION",
-                    STRUCTURE_ATTRIBUTE_SEARCH_SERVICE # this constant specifies "text" service
-                    )
+        query = AttributeQuery(
+            attribute="exptl.method",
+            operator="exact_match",
+            value="X-RAY DIFFRACTION"
+        )
         xray_pdbs = list(query())
         assert (xray_pdbs is not None), "PDB search failed, try again."
 
     # if macrmolecule_name specified get list of pdbs with macromolecular name
     if macromolecule_name is not None:
         print(f"Looking for structures with name {macromolecule_name}")
-        search_operator = AttributeQuery(value=macromolecule_name, operator='contains_phrase',
-            attribute="rcsb_polymer_entity.rcsb_macromolecular_names_combined.name")
+        search_operator = AttributeQuery(
+            attribute="rcsb_polymer_entity.rcsb_macromolecular_names_combined.name",
+            operator='contains_phrase',
+            value=macromolecule_name
+        )
         name_pdbs = list(search_operator('polymer_entity'))
         # assert (name_pdbs is not None), "PDB macromolecule search failed, try again"
         if not name_pdbs:
@@ -338,6 +347,6 @@ def query_by_sequence(sequences,
         Path(output_dir, "seq_search_output_"+label+".csv"))
 
     print(f"Saved output to {output_file}. To obtain PDB summary info, run "
-          f"EnsemblePDB.search_pdb.get_pdb_data('{output_file}')")
+          f"EnsemblePDB.search.get_data.get_pdb_data('{output_file}')")
     output.to_csv(output_file, index=False)
     return output
